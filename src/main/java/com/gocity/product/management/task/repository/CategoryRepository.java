@@ -13,6 +13,9 @@ public class CategoryRepository {
     private List<Category> categories = new ArrayList<>();
 
     public void add(Category category) {
+        if (category == null) {
+            throw new NullPointerException();
+        }
         categories.add(category);
     }
 

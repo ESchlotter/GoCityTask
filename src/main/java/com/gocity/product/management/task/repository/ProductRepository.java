@@ -12,6 +12,9 @@ public class ProductRepository {
     private List<Product> products = new ArrayList<>();
 
     public void add(Product product) {
+        if (product == null) {
+            throw new NullPointerException();
+        }
         products.add(product);
     }
 
